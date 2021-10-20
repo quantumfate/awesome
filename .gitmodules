@@ -2,3 +2,7 @@
 	path = awesome-wm-widgets
 	url = https://github.com/streetturtle/awesome-wm-widgets.git
 	branch = master
+[submodule "lain"]
+	path = lain
+	url = https://github.com/lcpz/lain.git
+	branch = master
