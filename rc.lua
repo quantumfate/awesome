@@ -6,7 +6,7 @@ local awful = require("awful")
 local wibox = require("wibox")
 local beautiful = require("beautiful")
 local ruled = require("awful.rules")
---local lain      = require("lain")
+local lain      = require("lain")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
@@ -45,7 +45,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
 -- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/awesome-wm-themes/%s/theme.lua", os.getenv("HOME"), "powerarrow-dark")
+local theme_path = string.format("%s/.config/awesome/awesome-wm-themes/%s/theme.lua", os.getenv("HOME"), "default")
 beautiful.init(theme_path)
 
 -- This is used later as the default terminal and editor to run.
