@@ -10,6 +10,7 @@ local lain      = require("lain")
 local naughty = require("naughty")
 local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local xrandr = require("src.xrandr")
 local dpi = require("beautiful.xresources").apply_dpi
 
 local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")

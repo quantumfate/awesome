@@ -3,7 +3,8 @@
         "client",
         "root",
         "screen",
-        "awesome"
+        "awesome",
+        "mouse"
     ],
     "Lua.diagnostics.disable": [
         "lowercase-global"
