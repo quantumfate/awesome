@@ -6,3 +6,6 @@
 	path = lain
 	url = https://github.com/lcpz/lain.git
 	branch = master
+[submodule "awesome-wm-themes"]
+	path = awesome-wm-themes
+	url = git@github.com:quantumfate/awesome-wm-themes.git
