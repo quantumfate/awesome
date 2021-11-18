@@ -2,10 +2,14 @@
 	path = awesome-wm-widgets
 	url = https://github.com/streetturtle/awesome-wm-widgets.git
 	branch = master
+	ignore = dirty
 [submodule "lain"]
 	path = lain
 	url = https://github.com/lcpz/lain.git
 	branch = master
+	ignore = dirty
 [submodule "awesome-wm-themes"]
 	path = awesome-wm-themes
 	url = git@github.com:quantumfate/awesome-wm-themes.git
+	branch = main
+	ignore = dirty
