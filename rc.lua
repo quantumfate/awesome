@@ -42,11 +42,20 @@ do
 end
 -- }}}
 
--- {{{ Variable definitions
--- Themes define colours, icons, font and wallpapers.
--- beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
-local theme_path = string.format("%s/.config/awesome/awesome-wm-themes/%s/theme.lua", os.getenv("HOME"), "quantumfate")
-beautiful.init(theme_path)
+-- relevant variables
+local config_dir = os.getenv("HOME") .. "/.config/awesome/"
+local theme_dir = "awesome-wm-themes/"
+
+
+-- themes in theme_dir
+local themes = {
+    "default",    -- 1
+    "quantumfate" -- 2
+}
+local my_theme = themes[2]
+
+-- set the theme
+theme = beautiful.init(config_dir .. theme_dir .. my_theme .. "/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
