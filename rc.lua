@@ -64,7 +64,7 @@ local themes = {
 local my_theme = themes[2]
 
 -- set the theme
-local theme = beautiful.init(config_dir .. theme_dir .. my_theme .. "/theme.lua")
+beautiful.init(config_dir .. theme_dir .. my_theme .. "/theme.lua")
 
 -- Table of layouts to cover with awful.layout.inc, order matters.
 awful.layout.layouts = {
