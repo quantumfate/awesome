@@ -51,7 +51,7 @@ end
 -- {{{ Relevant variables
 -- paths
 local config_dir = os.getenv("HOME") .. "/.config/awesome/"
-local theme_dir = "awesome-wm-themes/"
+local theme_dir = "themes/"
 
 -- terminal and editor
 local terminal = "alacritty"
