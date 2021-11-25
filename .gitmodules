@@ -1,8 +1,3 @@
-[submodule "awesome-wm-widgets"]
-	path = awesome-wm-widgets
-	url = https://github.com/streetturtle/awesome-wm-widgets.git
-	branch = master
-	ignore = dirty
 [submodule "lain"]
 	path = lain
 	url = https://github.com/lcpz/lain.git
