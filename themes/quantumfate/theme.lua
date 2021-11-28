@@ -144,7 +144,7 @@ theme.awesome_icon = theme_assets.awesome_icon(
 )
 
 --[[
-    
+   Heler functions 
 ]]
 
 -- determine if screen is horizontal
@@ -173,6 +173,16 @@ function get_tag_count()
     end
     return my_tags
 end
+
+--[[
+    Widgets
+]]
+-- Spotify
+local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
+-- CPU
+local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
+-- FS
+local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
 
 function theme.at_screen_connect(s)
     
@@ -233,6 +243,9 @@ function theme.at_screen_connect(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
+            fs_widget(),
+            spotify_widget(),
+            cpu_widget(),
             mykeyboardlayout,
             mytextclock,
             s.mylayoutbox,
