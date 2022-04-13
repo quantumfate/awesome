@@ -198,7 +198,7 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
+    awful.key({ modkey,           }, "e",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
               {description = "view previous", group = "tag"}),
@@ -219,8 +219,6 @@ globalkeys = gears.table.join(
         end,
         {description = "focus previous by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
 
     -- Layout manipulation
     awful.key({ modkey, "Shift"   }, "j", function () awful.client.swap.byidx(  1)    end,
@@ -266,7 +264,13 @@ globalkeys = gears.table.join(
               {description = "select next", group = "layout"}),
     awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "b", function () awful.spawn("gyazo")         end,
+    awful.key({ modkey,		  },            "w",     function () awful.spawn("rofi -show window -theme /home/leonch/.config/rofi/launchers/colorful/style_8.rasi") end,
+              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey		  },            "r",     function () awful.spawn("rofi -show run -theme /home/leonch/.config/rofi/launchers/colorful/style_8.rasi") end,
+              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey		  },            "s",     function () awful.spawn("rofi -show ssh -theme /home/leonch/.config/rofi/launchers/colorful/style_8.rasi") end,
+	      {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey, "Shift"   }, "c", function () awful.spawn("gyazo")         end,
               {description = "launch gyazo", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "r", function () awful.spawn(terminal .. " -e ranger")         end,
               {description = "launch ranger", group = "launcher"}),
@@ -284,8 +288,6 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.spawn("rofi -show run") end,
-              {description = "run prompt", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()

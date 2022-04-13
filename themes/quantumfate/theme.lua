@@ -95,6 +95,8 @@ theme.border_normal = theme.color0
 theme.border_focus  = theme.color0
 theme.border_marked = theme.color0
 
+theme.hotkeys_modifiers_fg = theme.color7
+
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
 theme.taglist_squares_sel = theme_assets.taglist_squares_sel(
