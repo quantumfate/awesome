@@ -13,10 +13,35 @@ local wibox = require("wibox")
 local os = os
 local gfs = require("gears.filesystem")
 local themes_path = gfs.get_themes_dir()
-
 --[[
     Variables
 ]]
+
+local colors = {}
+
+-- see if the file exists
+function file_exists(file)
+  local f = io.open(file, "rb")
+  if f then f:close() end
+  return f ~= nil
+end
+
+-- get all lines from a file, returns an empty
+-- list/table if the file does not exist
+function lines_from(file)
+  if not file_exists(file) then return {} end
+  local lines = {}
+  i = 0
+  for line in io.lines(file) do
+	lines['color' .. i] = line
+	i = i + 1
+  end
+  return lines
+end
+
+-- tests the functions above
+local file = os.getenv("HOME") .. '/.cache/wal/colors'
+local colors = lines_from(file)
 
 -- paths
 local config_dir = os.getenv("HOME") .. "/.config/awesome/"
@@ -24,8 +49,26 @@ local theme_dir = "themes/"
 
 local modkey = "Mod4"
 
-
 local theme = {}
+
+-- Set theme colors
+theme.color0 = colors.color0
+theme.color1 = colors.color1
+theme.color2 = colors.color2
+theme.color3 = colors.color3
+theme.color4 = colors.color4
+theme.color5 = colors.color5
+theme.color6 = colors.color6
+theme.color7 = colors.color7
+theme.color8 = colors.color8
+theme.color9 = colors.color9
+theme.color10 = colors.color10
+theme.color11 = colors.color11
+theme.color12 = colors.color12
+theme.color13 = colors.color13
+theme.color14 = colors.color14
+theme.color15 = colors.color15
+
 -- number of available tags (dont do more than 9)
 theme.tag_count = 5
 theme.dir = config_dir .. theme_dir .. "quantumfate/"
@@ -35,22 +78,22 @@ theme.wallpaper_horizontal = theme.wallpaper_dir .. "horizontal_wallpaper.png"
 -- Wallpaper for vertical rotation
 theme.wallpaper_vertical = theme.wallpaper_dir .. "vertical_wallpaper.png"
 theme.font = "Hack Nerd Font Mono 9"
-theme.bg_normal     = "#222222"
-theme.bg_focus      = "#535d6c"
-theme.bg_urgent     = "#ff0000"
-theme.bg_minimize   = "#444444"
+theme.bg_normal     = theme.color0
+theme.bg_focus      = theme.color4
+theme.bg_urgent     = theme.color2
+theme.bg_minimize   = theme.color0
 theme.bg_systray    = theme.bg_normal
 
-theme.fg_normal     = "#aaaaaa"
-theme.fg_focus      = "#ffffff"
-theme.fg_urgent     = "#ffffff"
-theme.fg_minimize   = "#ffffff"
+theme.fg_normal     = theme.color7
+theme.fg_focus      = theme.color0
+theme.fg_urgent     = theme.color2
+theme.fg_minimize   = theme.color5
 
-theme.useless_gap   = dpi(10)
-theme.border_width  = dpi(3)
-theme.border_normal = "#000000"
-theme.border_focus  = "#535d6c"
-theme.border_marked = "#91231c"
+theme.useless_gap   = dpi(8)
+theme.border_width  = dpi(2)
+theme.border_normal = theme.color0
+theme.border_focus  = theme.color0
+theme.border_marked = theme.color0
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(4)
@@ -226,7 +269,7 @@ function theme.at_screen_connect(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(24) })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = dpi(30) })
 
     -- Add widgets to the wibox
     

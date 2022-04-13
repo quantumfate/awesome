@@ -507,11 +507,4 @@ end)
 --
 
 -- Autostart
-awful.spawn.with_shell("/opt/jetbrains-toolbox-1.20.7940/jetbrains-toolbox")
-awful.spawn.with_shell("wal -R")
-awful.spawn.with_shell("picom")
-
---awful.spawn("discord")
---awful.spawn("spotify")
---awful.spawn("brave")
---awful.spawn("dropbox")
+awful.spawn.with_shell("~/.config/awesome/autorun.sh")
