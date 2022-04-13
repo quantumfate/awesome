@@ -87,7 +87,7 @@ theme.bg_systray    = theme.bg_normal
 theme.fg_normal     = theme.color7
 theme.fg_focus      = theme.color0
 theme.fg_urgent     = theme.color2
-theme.fg_minimize   = theme.color5
+theme.fg_minimize   = theme.color6
 
 theme.useless_gap   = dpi(8)
 theme.border_width  = dpi(2)
