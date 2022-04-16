@@ -36,6 +36,6 @@ run pamac-tray
 # blueman-applet and msm_notifier are not installed in minimal edition
 run blueman-applet
 run msm_notifier
-run wal -R
+# run wal -R
 run udiskie
 run teams-for-linux
