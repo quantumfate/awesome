@@ -40,7 +40,8 @@ function lines_from(file)
 end
 
 -- tests the functions above
-local file = os.getenv("HOME") .. '/.cache/wal/colors'
+local file = '/home/leonch/.config/awesome/themes/quantumfate/colors'
+-- os.getenv("HOME") .. themes_path .. 'colors'
 local colors = lines_from(file)
 
 -- paths
@@ -74,10 +75,10 @@ theme.tag_count = 5
 theme.dir = config_dir .. theme_dir .. "quantumfate/"
 theme.wallpaper_dir = theme.dir .. "wallpaper/"
 -- Wallpaper for horizontal rotation
-theme.wallpaper_horizontal = theme.wallpaper_dir .. "horizontal_wallpaper.png"
+theme.wallpaper_horizontal = theme.wallpaper_dir .. "horizontal_wallpaper.jpg"
 -- Wallpaper for vertical rotation
 theme.wallpaper_vertical = theme.wallpaper_dir .. "vertical_wallpaper.png"
-theme.font = "Hack Nerd Font Mono 9"
+theme.font = "Fira Code Font Mono 9"
 theme.bg_normal     = theme.color0
 theme.bg_focus      = theme.color4
 theme.bg_urgent     = theme.color2
