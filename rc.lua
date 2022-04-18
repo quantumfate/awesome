@@ -69,7 +69,7 @@ local themes = {
     "quantumfate", -- 2
     "quantumfate-mobile" -- 3
 }
-local my_theme = themes[3]
+local my_theme = themes[2]
 
 -- set the theme
 beautiful.init(config_dir .. theme_dir .. my_theme .. "/theme.lua")
