@@ -180,13 +180,13 @@ theme.layout_cornerse = theme.layout_dir .. "cornersew.png"
 
 theme.rules = {
 
-	{ rule = { class = "discord" }, properties = { screen = 2, tag = "2" } },
+	{ rule = { class = "discord" }, properties = { tag = "5" } },
 }
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus, theme.fg_focus)
 
 --[[
-   Heler functions 
+   Heler functions
 ]]
 
 -- determine if screen is horizontal
@@ -225,6 +225,10 @@ local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 -- FS
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
+-- Volume
+local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
+-- Battery
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
 function theme.at_screen_connect(s)
 	-- preparing values to be used depending on the screen rotation
@@ -281,9 +285,6 @@ function theme.at_screen_connect(s)
 
 	blue = "#9EBABA"
 	seperator = wibox.widget.textbox(' <span color="' .. blue .. '">| </span>')
-	local volume_widget = require("awesome-wm-widgets.volume-widget.volume")
-	local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
-
 	s.mywibox:setup({
 		layout = wibox.layout.align.horizontal,
 		{
@@ -297,11 +298,23 @@ function theme.at_screen_connect(s)
 		s.mytasklist, -- Middle widget
 		{ -- Right widgets
 			layout = wibox.layout.fixed.horizontal,
+			seperator,
+			spotify_widget({
+				font = "Ubuntu Mono 10",
+				play_icon = "/usr/share/icons/Arc/actions/22/player_start.png",
+				pause_icon = "/usr/share/icons/Arc/actions/22/player_pause.png",
+				dim_when_paused = true,
+				dim_opacity = 0.5,
+				max_length = 15,
+				show_tooltip = true,
+			}),
+			seperator,
 			fs_widget(),
-			spotify_widget(),
+			seperator,
 			cpu_widget(),
 			seperator,
 			volume_widget(),
+			seperator,
 			batteryarc_widget({
 				show_current_level = true,
 				arc_thickness = 2,
