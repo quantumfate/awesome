@@ -65,9 +65,8 @@ local modkey = "Mod4"
 
 -- themes in theme_dir as folder name
 local themes = {
-    "default",    -- 1
-    "quantumfate", -- 2
-    "quantumfate-mobile" -- 3
+    "quantum-desktop", -- 1
+    "quantum-mobile" -- 2
 }
 local my_theme = themes[2]
 
