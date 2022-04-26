@@ -8,3 +8,9 @@
 	url = https://github.com/lcpz/lain.git
 	branch = master
 	ignore = dirty
+[submodule "themes/quantum-mobile"]
+	path = themes/quantum-mobile
+	url = git@github.com:quantumfate/quantum-mobile.git
+[submodule "themes/quantum-desktop"]
+	path = themes/quantum-desktop
+	url = git@github.com:quantumfate/quantum-desktop.git
