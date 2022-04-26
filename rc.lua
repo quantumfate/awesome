@@ -270,7 +270,7 @@ globalkeys = gears.table.join(
               {description = "run prompt", group = "launcher"}),
     awful.key({ modkey		  },            "s",     function () awful.spawn("rofi -show ssh -theme " .. os.getenv("HOME") .. "/.config/rofi/launchers/misc/blurry.rasi") end,
 	      {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey, "Shift"   }, "c", function () awful.spawn("gyazo")         end,
+    awful.key({ modkey, "Shift"   }, "z", function () awful.spawn("gyazo")         end,
               {description = "launch gyazo", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "r", function () awful.spawn(terminal .. " -e ranger")         end,
               {description = "launch ranger", group = "launcher"}),
