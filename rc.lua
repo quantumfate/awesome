@@ -68,7 +68,7 @@ local themes = {
     "quantum-desktop", -- 1
     "quantum-mobile" -- 2
 }
-local my_theme = themes[2]
+local my_theme = themes[1]
 
 -- set the theme
 beautiful.init(config_dir .. theme_dir .. my_theme .. "/theme.lua")
