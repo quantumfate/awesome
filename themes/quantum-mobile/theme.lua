@@ -82,7 +82,7 @@ theme.wallpaper_dir = theme.dir .. "wallpaper/"
 theme.wallpaper_horizontal = theme.wallpaper_dir .. "horizontal_wallpaper.jpg"
 -- Wallpaper for vertical rotation
 theme.wallpaper_vertical = theme.wallpaper_dir .. "vertical_wallpaper.png"
-theme.font = "Fira Code Font Mono 9"
+theme.font = "Fira Code Nerd Font Mono 9"
 theme.bg_normal = theme.color0
 theme.bg_focus = theme.color4
 theme.bg_urgent = theme.color2
