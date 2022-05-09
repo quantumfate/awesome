@@ -38,4 +38,5 @@ run blueman-applet
 run msm_notifier
 run wal -R
 run udiskie
+run dropbox
 run teams-for-linux
