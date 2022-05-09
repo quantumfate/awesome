@@ -84,7 +84,7 @@ theme.wallpaper_horizontal = theme.wallpaper_dir .. "horizontal_wallpaper.jpg"
 theme.wallpaper_vertical = theme.wallpaper_dir .. "vertical_wallpaper.png"
 theme.font = "Fira Code Nerd Font Mono 9"
 theme.bg_normal = theme.color0
-theme.bg_focus = theme.color4
+theme.bg_focus = theme.color5
 theme.bg_urgent = theme.color2
 theme.bg_minimize = theme.color0
 theme.bg_systray = theme.bg_normal
@@ -341,7 +341,7 @@ function theme.build_custom_titlebar(c)
 		end)
 	)
 
-	awful.titlebar(c):setup({
+	awful.titlebar(c, {size = 20 }):setup({
 		{ -- Left
 			awful.titlebar.widget.iconwidget(c),
 			buttons = buttons,
