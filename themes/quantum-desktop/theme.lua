@@ -264,13 +264,14 @@ local cpuwidget = wibox.container.margin(cpubg, dpi(0), dpi(0), dpi(5), dpi(5))
 
 theme.rules = {
 
-	{ rule = { class = "discord" }, properties = { screen = 2, tag = "2" } },
+	{ rule = { class = "Thunderbird" }, properties = { screen = 1, tag = "5" } },
+	{ rule = { instance = "keepassxc" }, properties = { screen = 1, tag = "5" } },
 }
 -- Generate Awesome icon:
 theme.awesome_icon = theme_assets.awesome_icon(theme.menu_height, theme.bg_focus, theme.fg_focus)
 
 --[[
-   Heler functions 
+   Helper functions 
 ]]
 
 -- determine if screen is horizontal
@@ -325,7 +326,8 @@ local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 local cpu_widget = require("awesome-wm-widgets.cpu-widget.cpu-widget")
 -- FS
 local fs_widget = require("awesome-wm-widgets.fs-widget.fs-widget")
-
+--Battery
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 
 -- Separators
 local first = wibox.widget.textbox('<span font="Roboto 7"> </span>')
@@ -415,6 +417,8 @@ function theme.at_screen_connect(s)
 				wibox.container.margin(theme_icons.keyboard_icon, dpi(5), dpi(0), dpi(5), dpi(5)),
 				wibox.container.margin(mykeyboardlayout, dpi(5), dpi(0), dpi(5), dpi(5)),
 				theme_icons.seperator_icon,
+				wibox.container.margin(batteryarc_widget(), dpi(5), dpi(5), dpi(5), dpi(5)),
+				theme_icons.seperator_icon,
 				netdown_icon,
 				networkwidget,
 				netup_icon,
@@ -428,6 +432,7 @@ function theme.at_screen_connect(s)
 				theme_icons.seperator_icon,
 				clock_icon,
 				clockwidget,
+				
 			},
 		}
 	else
@@ -496,5 +501,5 @@ end
 
 -- Define the icon theme for application icons. If not set then the icons
 -- from /usr/share/icons and /usr/share/icons/hicolor will be used.
-theme.icon_theme = nil
+theme.icon_theme = "/usr/share/icons/Papirus-Dark"
 return theme
