@@ -40,3 +40,5 @@ run wal -R
 run udiskie
 run dropbox
 run teams-for-linux
+run keepassxc
+run thunderbird
