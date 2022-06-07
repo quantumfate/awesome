@@ -52,7 +52,7 @@ end
 -- paths
 local config_dir = os.getenv("HOME") .. "/.config/awesome/"
 local theme_dir = "themes/"
-
+local script_dir = os.getenv("HOME") .. "/.script/"
 -- terminal and editor
 local terminal = "alacritty"
 local editor = os.getenv("EDITOR")
@@ -272,6 +272,10 @@ globalkeys = gears.table.join(
               {description = "launch gyazo", group = "launcher"}),
     awful.key({ modkey, "Shift"   }, "r", function () awful.spawn(terminal .. " -e ranger")         end,
               {description = "launch ranger", group = "launcher"}),
+    awful.key({ modkey, "Control"   }, "u", function () awful.spawn("changebrightness up")         end,
+              {description = "increase the display brightness", group = "screen"}),
+    awful.key({ modkey, "Control"   }, "d", function () awful.spawn("changebrightness down")         end,
+              {description = "reduce the display brightness", group = "screen"}),
 
     awful.key({ modkey, "Control" }, "n",
               function ()
