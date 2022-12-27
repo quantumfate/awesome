@@ -33,7 +33,7 @@ naughty.config.defaults['icon_size'] = 100
 --local menubar       = require("menubar")
 
 local lain          = require("lain")
-local freedesktop   = require("freedesktop")
+local freedesktop   = require("awesome-freedesktop")
 
 -- Enable hotkeys help widget for VIM and other apps
 -- when client with a matching name is opened:

@@ -1,3 +1,6 @@
 [submodule "lain"]
 	path = lain
 	url = https://github.com/quantumfate/lain.git#545_openweathermap_api_request_use_lat_and_lon_instead_of_city_id
+[submodule "awesome-freedesktop"]
+	path = awesome-freedesktop
+	url = git@github.com:lcpz/awesome-freedesktop.git
