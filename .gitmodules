@@ -1,3 +1,3 @@
 [submodule "lain"]
 	path = lain
-	url = https://github.com/lcpz/lain
+	url = https://github.com/quantumfate/lain.git#545_openweathermap_api_request_use_lat_and_lon_instead_of_city_id
